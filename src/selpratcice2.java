@@ -3,6 +3,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class selpratcice2 {
 
@@ -30,7 +31,10 @@ public class selpratcice2 {
 		
 		driver.findElement(By.className("signInBtn")).click();
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
+		Assert.assertEquals(driver.findElement(By.cssSelector("div[class*='container'] h2")).getText(),"Hello Ananay,");
+		
+		Thread.sleep(2000);
 		driver.findElement(By.className("logout-btn")).click();
 		
 		driver.close();
