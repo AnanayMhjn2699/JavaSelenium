@@ -17,6 +17,8 @@ public class hashMap {
 		System.out.println(hm);
 		System.out.println(hm.get(0));
 		
+		//traversing through hashmap
+		//M1
 		Set hs=hm.entrySet();
 		Iterator i=hs.iterator();
 		
@@ -24,6 +26,18 @@ public class hashMap {
 			Map.Entry m=(Map.Entry)i.next();
 			System.out.print(m.getKey());
 			System.out.println(m.getValue());
+		}
+		
+		//M2
+		for(int key:hm.keySet()) {
+			System.out.println(hm.get(key));
+		}
+		
+		
+		//M3
+		Iterator j=hm.keySet().iterator();
+		while(j.hasNext()) {
+			System.out.println(hm.get(j.next()));
 		}
 		
 

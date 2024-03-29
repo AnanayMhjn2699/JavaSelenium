@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Iterator;
 
 class demo {
 
@@ -35,6 +36,7 @@ class demo {
 			System.out.println(i);
 		}
 		
+		
 		HashMap<Integer,Integer> hm=new HashMap();
 		hm.put(1, 10);
 		hm.put(2, 20);
@@ -42,6 +44,15 @@ class demo {
 		hm.put(4, 40);
 		
 		//HashSet hs=Map.Entry<int, int>(hm);
+		
+		for(int key:hm.keySet()) {
+			System.out.println(hm.get(key));
+		}
+		
+		Iterator i=hm.keySet().iterator();
+		while(i.hasNext()) {
+			System.out.println(hm.get(i.next()));
+		}
 		
 		
 		
